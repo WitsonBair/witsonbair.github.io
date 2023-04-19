@@ -1,10 +1,99 @@
-.card-hello{
-    background-color: #FA7268;
-    color: #FFFFFF;
-    width: 230px;
-    height: 25px;
-    padding: 20px;
-    margin: 10px;
-    border: 2px solid #9C27B0;
-    font-size: 20px;
-  }
+@font-face {
+  font-weight: normal;
+  font-family: Comfortaa-regular;
+  src: url('../assets/fonts/Comfortaa-Regular.ttf');
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: Comfortaa-bold;
+  src: url('../assets/fonts/Comfortaa-Bold.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  color: #333;
+  font: 18px/1.5 Comfortaa-regular, sans-serif;
+
+  background: #2c3e50;
+}
+
+image {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.khas {
+  padding: 0;
+  margin: 0;
+  width: 80px;
+}
+
+.header {
+  padding-top: 10px;
+}
+
+.header-yellow {
+  background: #f9e79f;
+  color: #2c3e50;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.nav > ul {
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+.nav li {
+  position: relative;
+
+  padding: 0;
+  margin: 0 30px;
+
+  cursor: pointer;
+}
+
+.sub-menu {
+  display: none;
+}
+
+.nav li:hover > .sub-menu {
+  position: absolute;
+  left: 0;
+
+  display: block;
+
+  width: max-content;
+  padding-top: 25px;
+
+  background: #f9e79f;
+  box-shadow: 5px 5px 5px 0 rgb(244 208 63 / 100%);
+}
+
+.nav a {
+  color: #333;
+  text-decoration: none;
+}
+
+.nav .nav-title {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav li:hover > a,
+.nav li:hover > .nav-title {
+  color: #6e2c00 ;
+}
