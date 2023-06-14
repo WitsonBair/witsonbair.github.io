@@ -1,99 +1,220 @@
+/*-- Common --*/
 @font-face {
   font-weight: normal;
   font-family: Comfortaa-regular;
   src: url('../assets/fonts/Comfortaa-Regular.ttf');
 }
 
-@font-face {
-  font-weight: normal;
-  font-family: Comfortaa-bold;
-  src: url('../assets/fonts/Comfortaa-Bold.ttf');
-}
-
 body {
   margin: 0;
   padding: 0;
 
-  color: #333;
-  font: 18px/1.5 Comfortaa-regular, sans-serif;
-
-  background: #2c3e50;
-}
-
-image {
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-}
-
-.khas {
-  padding: 0;
-  margin: 0;
-  width: 80px;
-}
-
-.header {
-  padding-top: 10px;
-}
-
-.header-yellow {
-  background: #f9e79f;
   color: #2c3e50;
+  font-family: Comfortaa-regular, sans-serif;
+
+  background: #ecf0f1;
+
+  display: flex;
 }
 
-.nav ul {
+ul {
+  list-style: none;
   margin: 0;
   padding: 0;
-
-  list-style: none;
 }
 
-.nav > ul {
+.outer-container {
+  width: calc(100% - 90px);
+  margin-left: 90px;
+  overflow: hidden;
+}
+
+.inner-container {
+  padding: 0 30px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*-- Common --*/
+
+/*-- Home --*/
+header {
   display: flex;
-  vertical-align: middle;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
+  min-height: 100vh;
+  width: 100%;
 }
 
-
-.nav li {
+header .heroImage {
+  display: flex;
+  flex: 0 0 50%;
+  padding: 0 15px;
+  justify-content: center;
   position: relative;
-
-  padding: 0;
-  margin: 0 30px;
-
-  cursor: pointer;
+  width: 100%;
 }
 
-.sub-menu {
+header .heroImage img {
+  border-radius: 50%;
+  margin: 0 auto;
+  width: 350px;
+  height: 350px;
+  box-shadow: 0 0 3rem gold;
+}
+
+header .intro {
+  flex: 0 0 50%;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.hero {
+  font-size: 3rem;
+}
+
+.links-cv-social {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+}
+
+.cv {
+  background-color: gold;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+
+.icon-github::before {
+  content: '';
+  display: block;
+  background: url('../assets/icons/github-original.svg') no-repeat center center / cover;
+  border-radius: 10px;
+  height: 40px;
+  width: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.icon-hh::before {
+  content: '';
+  display: block;
+  background: url('../assets/icons/hh.svg') no-repeat center center / cover;
+  border-radius: 10px;
+  height: 40px;
+  width: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.icon-linkedin::before {
+  content: '';
+  display: block;
+  background: url('../assets/icons/linkedin-original.svg') no-repeat center center / cover;
+  border-radius: 10px;
+  height: 40px;
+  width: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+/*-- Home --*/
+
+/*-- Side Menu --*/
+.hidden-name {
   display: none;
 }
 
-.nav li:hover > .sub-menu {
-  position: absolute;
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
   left: 0;
-
-  display: block;
-
-  width: max-content;
-  padding-top: 25px;
-
-  background: #f9e79f;
-  box-shadow: 5px 5px 5px 0 rgb(244 208 63 / 100%);
+  width: 90px;
+  height: 100%;
+  background-color: gold;
 }
 
-.nav a {
-  color: #333;
-  text-decoration: none;
+/*-- Side Menu --*/
+
+/*-- Skills --*/
+.skills {
+  min-height: 100vh;
 }
 
-.nav .nav-title {
-  color: #333;
-  font-weight: bold;
-  text-decoration: none;
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.nav li:hover > a,
-.nav li:hover > .nav-title {
-  color: #6e2c00 ;
+.skill-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-list-container .hover-icon-main {
+  
+}
+
+.skill-container img {
+  width: 40px;
+  height: 40px;
+}
+
+.skill-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+/*-- Skills --*/
+
+/*-- Animation --*/
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.skill-container:nth-child(2) {
+  transition-delay: 100ms;
+}
+
+.skill-container:nth-child(3) {
+  transition-delay: 200ms;
+}
+
+.skill-container:nth-child(4) {
+  transition-delay: 300ms;
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+/*-- Animation --*/
+.hover-icon-main:hover {
+  box-shadow: 0 0 3rem gold;
 }

@@ -1,38 +1,171 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="jsgame" content="boardgame">
-    <title>JS Game Project</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An aspiring Frontend Web Developer">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="app.js"></script>
+    <script src="https://kit.fontawesome.com/a3dfa678fb.js" crossorigin="anonymous"></script>
+    <title>Tsydendambaev Bair - Front-end Developer</title>
 </head>
+
 <body>
-    <header class="header header-yellow">
-        <nav class="nav">
-            <ul>
+    <aside class="side-menu">
+        <nav>
+            <ul class="side-bar">
                 <li>
-                    <img src="./src/logo2.png" alt="logotype" class="khas">
+                    <a href="#home">
+                        <i class="icon icon-home"></i>
+                        <span class="hidden-name">Главная</span>
+                    </a>
                 </li>
                 <li>
-                    <span class="nav-title">Проекты</span>
-                    <ul class="sub-menu">
-                        <li><a href="#">JS Board Game</a></li>
-                        <li><a href="#">Platformer</a></li>
-                        <li><a href="#">Calculator</a></li>
-                    </ul>
+                    <a href="#skills">
+                        <i class="icon icon-skills"></i>
+                        <span class="hidden-name">Навыки</span>
+                    </a>
                 </li>
                 <li>
-                    <span class="nav-title">Статьи</span>
-                    <ul class="sub-menu">
-                        <li><a href="#">Статья 1</a></li>
-                        <li><a href="#">Статья 2</a></li>
-                    </ul>
+                    <a href="#projects">
+                        <i class="icon icon-projects"></i>
+                        <span class="hidden-name">Проекты</span>
+                    </a>
                 </li>
-                <li><a href="#" class="nav-title">Обо мне</a></li>
-                <li><a href="#" class="nav-title">Контакты</a></li>
+                <li>
+                    <a href="#contact">
+                        <i class="icon icon-contact"></i>
+                        <span class="hidden-name">Контакт</span>
+                    </a>
+                </li>
             </ul>
         </nav>
-    </header>
+    </aside>
+    <div class="outer-container">
+        <div class="inner-container">
+            <header id="home">
+                <div class="heroImage">
+                    <img src="assets/images/hero.png" alt="A photo of Tsydendambaev Bair">
+                </div>
+                <div class="intro hidden">
+                    <p>Здравствуйте! Меня зовут</p>
+                    <h1 class="hero"><span>Цыдендамбаев</span> Баир</h1>
+                    <p>Я начинающий Front-end разработчик, стремящийся познать новые грани разработки</p>
+                    <ul class="links-cv-social">
+                        <li>
+                            <a href="./src/cv.pdf" target="_blank">
+                                <p class="cv">Резюме</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/WitsonBair" target="_blank">
+                                <i class="icon icon-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ulan-ude.hh.ru/applicant/resumes/view?resume=00e69609ff0c0d9f510039ed1f766d53585167"
+                                target="_blank">
+                                <i class="icon icon-hh"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/bair-tsydendambaev-87b468122/" target="_blank">
+                                <i class="icon icon-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <div class="skills-projects">
+                <div class="skills-container" id="skills">
+                    <h1>Навыки</h1>
+                    <ul class="skill-list-container">
+                        <li class="skill-container hidden grid-skill-1">
+                            <img src="./assets/skills/javascript.svg" alt="JS">
+                            <p>JavaScript</p>
+                        </li>
+                        <li class="skill-container hidden grid-skill-2">
+                            <img src="./assets/skills/NodeJS.svg" alt="NodeJS">
+                            <p>NodeJS</p>
+                        </li>
+                        <li class="skill-container hidden grid-skill-3">
+                            <img src="./assets/skills/Jest.svg" alt="Jest">
+                            <p>Jest</p>
+                        </li>
+                        <li class="skill-container hidden grid-skill-4">
+                            <img src="./assets/skills/html.svg" alt="HTML">
+                            <p>HTML5</p>
+                        </li>
+                        <li class="skill-container hidden grid-skill-5">
+                            <img src="./assets/skills/css.svg" alt="CSS">
+                            <p>CSS3</p>
+                        </li>
+                        <li class="skill-container hidden grid-skill-6">
+                            <img src="./assets/skills/sass.svg" alt="Sass">
+                            <p>Sass</p>
+                        </li>
+                        <li class="skill-container hidden grid-skill-7">
+                            <img src="./assets/skills/git.svg" alt="Git">
+                            <p>Git</p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h1 id="projects">Проекты</h1>
+                    <div class="projects-container">
+                        <article>
+                            <div class="project-image">
+                                <img src="./assets/images/brain-games.png" alt="Brain Games">
+                            </div>
+                            <div class="project-description">
+                                <h3>Brain Games</h3>
+                                <h4>Использованный стэк: <span>JavaScript</span>, <span>NodeJS</span></h4>
+                                <p>«Игры разума» — набор из пяти консольных игр, построенных по принципу популярных
+                                    мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые
+                                    нужно
+                                    дать правильные ответы. После трех правильных ответов считается, что игра пройдена.
+                                    Неправильные ответы завершают игру и предлагают пройти ее заново.</p>
+                                <a href="https://github.com/WitsonBair/frontend-project-lvl1">Репозиторий</a>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="project-image">
+                                <img src="./assets/images/diff.png" alt="a pic of Brain Games" target="_blank">
+                            </div>
+                            <div class="project-description">
+                                <h3>Вычислитель отличий</h3>
+                                <h4>Использованный стэк: <span>JavaScript</span>, <span>NodeJS</span>,
+                                    <span>Jest</span>,
+                                    <span>commander.js</span>
+                                </h4>
+                                <p>Вычислитель отличий – программа, определяющая разницу между двумя структурами данных.
+                                    Это
+                                    популярная задача, для решения которой существует множество онлайн сервисов,
+                                    например
+                                    http://www.jsondiff.com/. Подобный механизм используется при выводе тестов или при
+                                    автоматическом отслеживании изменений в конфигурационных файлах.</p>
+                                <a href="https://github.com/WitsonBair/frontend-project-46"
+                                    target="_blank">Репозиторий</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-container" id="contact">
+                <form action="https://formspree.io/f/xayzroyq" method="POST">
+                    <h1>Контакт</h3>
+                        <input type="text" id="name" placeholder="Ваше имя" required>
+                        <input type="email" name="email" placeholder="e-mail" required>
+                        <textarea name="message" rows="4" placeholder="Ваше сообщение"></textarea>
+                        <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
