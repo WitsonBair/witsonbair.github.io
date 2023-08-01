@@ -1,0 +1,17 @@
+{
+  "name": "witsonbair.github.io",
+  "version": "1.1.4",
+  "description": "[![test-check](https://github.com/WitsonBair/witsonbair.github.io/actions/workflows/test.yml/badge.svg)](https://github.com/WitsonBair/witsonbair.github.io/actions/workflows/test.yml)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "WitsonBair",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.46.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.28.0"
+  }
+}
