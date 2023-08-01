@@ -1,19 +1,25 @@
 name: test-check
 
 on:
-    push:
-        branches:
-            - main
-    pull_request:
-        branches:
-            - main
-    workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
-    hello:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v3
-            - name: Hi there
-              run: echo 'Hello!'
-              shell: bash
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Hi there
+        run: echo 'Hello!'
+        shell: bash
+  comment-with-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "dump guthub context"
+        run: echo '${{ toJSON(github.event) }}' | jq
+        shell: bash
