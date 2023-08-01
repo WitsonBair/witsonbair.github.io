@@ -1,4 +1,4 @@
-name: My personal page workflow
+name: test-check
 
 on:
     push:
@@ -13,13 +13,7 @@ jobs:
     hello:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
             - name: Hi there
               run: echo 'Hello!'
-              shell: bash
-    goodbye:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Goodbye!
-              run: echo 'Goodbye!'
               shell: bash
