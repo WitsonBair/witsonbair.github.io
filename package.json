@@ -1,6 +1,7 @@
 {
   "name": "witsonbair.github.io",
   "version": "1.1.4",
+  "type": "module",
   "description": "[![test-check](https://github.com/WitsonBair/witsonbair.github.io/actions/workflows/test.yml/badge.svg)](https://github.com/WitsonBair/witsonbair.github.io/actions/workflows/test.yml)",
   "private": "true",
   "scripts": {
