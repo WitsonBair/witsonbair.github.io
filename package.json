@@ -1,8 +1,7 @@
 {
   "name": "witsonbair.github.io",
-  "version": "1.1.4",
-  "type": "module",
-  "description": "[![test-check](https://github.com/WitsonBair/witsonbair.github.io/actions/workflows/test.yml/badge.svg)](https://github.com/WitsonBair/witsonbair.github.io/actions/workflows/test.yml)",
+  "version": "1.1.6",
+  "description": "My personal page",
   "private": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +9,6 @@
     "start": "webpack serve --open",
     "build": "webpack"
   },
-  "keywords": [],
   "author": "WitsonBair",
   "license": "ISC",
   "devDependencies": {
@@ -30,8 +28,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.8",
-    "bootstrap": "^5.3.1",
-    "lodash": "^4.17.21"
+    "i18next": "^23.4.4",
+    "on-change": "^4.0.2"
   }
 }

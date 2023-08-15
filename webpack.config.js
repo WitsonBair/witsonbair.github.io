@@ -1,42 +1,34 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-export default {
-  mode: process.env.NODE_ENV || 'development',
+module.exports = {
+  mode: 'development',
+  entry: './src/index.js',
+  devtool: 'inline-source-map',
+  devServer: {
+    static: './dist',
+  },
   module: {
     rules: [
-      { exclude: /node_modules/ },
       {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
+        test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'style-loader'],
       },
       {
         test: /\.scss$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
-      },
-      {
-        test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        use: 'url-loader?limit=10000',
-      },
-      {
-        test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
-        use: 'file-loader',
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader', 'postcss-loader'],
       },
     ],
   },
-
+  output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
+  },
   plugins: [
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: 'index.html',
     }),
-    new MiniCssExtractPlugin(),
   ],
-  output: {
-    clean: true,
-  },
-
-  devServer: {
-    open: true,
-    host: 'localhost',
-  },
 };
